@@ -1,0 +1,11 @@
+services:
+  llm-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: llm-api-fresh
+    ports:
+      - "8000:8000"
+    environment:
+      API_KEY: supersecret123
+      MODEL_NAME: sshleifer/tiny-gpt2
